@@ -229,7 +229,7 @@ h4 {
     zoom: 1;
 }
 
-.flexslider .slides img {
+.flexslider .img-slide {
     width: 100%;
     min-width: 648px;
     min-height: 270px;
