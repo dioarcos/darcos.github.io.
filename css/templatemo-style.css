@@ -460,6 +460,17 @@ h4 {
     font-size: 30px;
     text-align: center;
 }
+
+
+.skills .progress {
+    background: #f9f9f9;
+    box-shadow: none;
+    border-radius: 0px;
+}
+
+.skills .progress .progress-bar-danger {
+    background: #55acee;
+}
 /* end skills */
 /* start divider */
 .divider {
@@ -490,18 +501,6 @@ h3.about-title {
 #about {
     padding-top: 80px;
     padding-bottom: 80px;
-}
-
-
-
-#about .progress {
-    background: #f9f9f9;
-    box-shadow: none;
-    border-radius: 0px;
-}
-
-#about .progress .progress-bar-danger {
-    background: #55acee;
 }
 
 #about span {
