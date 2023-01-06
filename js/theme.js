@@ -65,9 +65,9 @@
         Email.send({
             SecureToken : "ddd0f249-5e42-4787-aa2c-22cd27484487",
             To : 'dioarcos@gmail.com',
-            From : "dioarcos@gmail.com",
-            Subject : "pruebas 21",
-            Body :  "esto va por que va"
+            From : email,
+            Subject : subject,
+            Body :  message_text
         }).then(
             message => createAlert('','Excelente, Gracias por escribir!','Pronto me pondre en contacto','success',true,true,'pageMessages')
         );
