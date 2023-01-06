@@ -550,7 +550,7 @@
 								</div>
 								<div class="iso-box web-page woocomerce col-md-4 col-sm-6 col-xs-12">
 									<div class="portfolio-thumb">
-										<img src="images/trecos.JPG" class="fluid-img" alt="portfolio img" />
+										<img src="images/trecos.jpg" class="fluid-img" alt="portfolio img" />
 										<div class="portfolio-overlay">
 											<div class="portfolio-description">
 												<a href="https://trecos.com.ec/" target="_blank" class="fa fa-link"></a>
@@ -706,23 +706,58 @@
 						<hr />
 						<h4>Quieres cotizar tu proyecto..</h4>
 					</div>
-					<form action="#" method="post" role="form">
+					<form action="#" method="post" role="form" id="myForm">
 						<div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.3s">
-							<input type="text" placeholder="Name" class="form-control" />
+							<input  type="names" 
+									id="names" 
+									name="names" 
+									value=""
+									maxlength="50"
+									class="form-control"
+									placeholder="Nombre de Empresa" 
+									data-validation="required"
+									data-sanitize="trim lower"/>
 						</div>
 						<div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.3s">
-							<input type="email" placeholder="Email" class="form-control" />
+							<input 	type="email"  
+									id="email" 
+									name="email"
+									value=""
+									maxlength="150"
+									class="form-control"
+									placeholder="Email"
+									data-validation="required"
+									data-sanitize="trim lower"/>
 						</div>
 						<div class="col-md-4 col-sm-4 wow fadeIn" data-wow-delay="0.3s">
-							<input type="text" placeholder="Subject" class="form-control" />
+							<input 	type="text" 
+									id="subject"
+									name="subject"  
+									value=""
+									maxlength="150"
+									class="form-control"
+									placeholder="Asunto"
+									data-validation="required"
+									data-sanitize="trim lower" />
 						</div>
 						<div class="col-md-12 col-sm-12 wow fadeIn" data-wow-delay="0.9s">
-							<textarea class="form-control" rows="5" placeholder="Message"></textarea>
+							<textarea 	rows="5" 
+										id="message_text"
+										name="message_text" 
+										maxlength="250"
+										class="form-control" 
+										placeholder="Mensaje"
+										data-validation="required"
+										data-sanitize="trim lower"></textarea>
 						</div>
 						<div class="col-md-offset-3 col-sm-offset-3 col-sm-6 col-md-6 wow fadeIn" data-wow-delay="0.3s">
-							<input type="submit" value="Enviar" class="form-control" />
+							<input type="submit" value="Enviar" class="form-control submit-btn" />
 						</div>
 					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div id="pageMessages">
 				</div>
 			</div>
 		</div>
@@ -747,15 +782,18 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/jquery.flexslider.js"></script>
-	<script src="js/aos.js?ver=1.1.0"></script>
+	<script src="js/aos.min.js?ver=1.1.0"></script>
 	<script src="js/isotope.js"></script>
 	<script src="js/imagesloaded.min.js"></script>
 	<script src="js/smoothscroll.js"></script>
 	<script src="js/wow.min.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/custom.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 	<script src="js/jquery.waypoints.min.js"></script>
 	<script src="js/jquery.counterup.min.js"></script>
+	<script src="js/validated/jquery.form-validator.min.js"></script>
+	<script src="js/validated/lang/es.js"></script>
 	<script src="js/theme.js"></script>
 </body>
 
