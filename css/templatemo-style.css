@@ -8,7 +8,7 @@ https://templatemo.com/tm-461-workforce
 
 body {
     background: #f9f9f9;
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 400;
     overflow-x: hidden;
 }
@@ -167,7 +167,7 @@ h4 {
     border-color: transparent;
 }
 
-@media(min-width:768px) {
+@media (min-width: 768px) {
     .custom-navbar {
         padding: 20px 0;
         border-bottom: 0;
@@ -263,7 +263,7 @@ h4 {
     margin: 0;
     border: 15px solid transparent;
     z-index: 9999;
-    transition: all .3s ease-out;
+    transition: all 0.3s ease-out;
 }
 
 /* Resize images */
@@ -272,19 +272,20 @@ h4 {
 }
 
 .flexslider .cc-profile-image a:before {
-        content: "";
-        border: 15px solid rgba(59, 75, 135, 0.6);
-        border-radius: 50%;
-        height: 180px;
-        width: 180px;
-        position: absolute;
-        left: 0;
-        -webkit-animation: pulsate 1.6s ease-out;
-                animation: pulsate 1.6s ease-out;
-        -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-        opacity: 0.0;
-        z-index: 99; }
+    content: "";
+    border: 15px solid rgba(59, 75, 135, 0.6);
+    border-radius: 50%;
+    height: 180px;
+    width: 180px;
+    position: absolute;
+    left: 0;
+    -webkit-animation: pulsate 1.6s ease-out;
+    animation: pulsate 1.6s ease-out;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    opacity: 0;
+    z-index: 99;
+}
 
 .flexslider .cc-profile-image a:hover img {
     transform: scale(1.06, 1.06);
@@ -299,35 +300,34 @@ h4 {
 @-webkit-keyframes pulsate {
     0% {
         transform: scale(0.6, 0.6);
-        opacity: 0.0;
+        opacity: 0;
     }
 
     50% {
-        opacity: 1.0;
+        opacity: 1;
     }
 
     100% {
         transform: scale(1, 1);
-        opacity: 0.0;
+        opacity: 0;
     }
 }
 
 @keyframes pulsate {
     0% {
         transform: scale(0.6, 0.6);
-        opacity: 0.0;
+        opacity: 0;
     }
 
     50% {
-        opacity: 1.0;
+        opacity: 1;
     }
 
     100% {
         transform: scale(1, 1);
-        opacity: 0.0;
+        opacity: 0;
     }
 }
-
 
 .slider-caption {
     color: white;
@@ -377,6 +377,7 @@ h4 {
     font-size: 20px;
     padding-bottom: 10px;
 }
+
 /* end profile-page*/
 /* start service */
 #service {
@@ -415,15 +416,13 @@ h4 {
 
 /* start skills */
 .skills {
-    background: url('../images/divider-bg.jpg');
+    background: url("../images/divider-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: center ;
+    background-position: center;
     color: #ffffff;
     text-align: center;
-
-
 }
 
 .skills .divider-des h3 {
@@ -435,32 +434,30 @@ h4 {
     padding: 20px 0;
     margin-bottom: 30px;
     background: rgba(144, 144, 144, 0.78);
-
 }
 
-.skills  .divider-des {
+.skills .divider-des {
     padding: 100px 15px;
 }
 
-.skills  .divider-des .fab {
+.skills .divider-des .fab {
     color: #55acee;
     font-size: 60px;
     width: 65px;
     height: 65px;
 }
 
-.skills  .divider-des .fas {
+.skills .divider-des .fas {
     color: #55acee;
     font-size: 60px;
     width: 65px;
     height: 65px;
 }
 
-.skills  .divider-des h2>span {
+.skills .divider-des h2>span {
     font-size: 30px;
     text-align: center;
 }
-
 
 .skills .progress {
     background: #f9f9f9;
@@ -471,10 +468,11 @@ h4 {
 .skills .progress .progress-bar-danger {
     background: #55acee;
 }
+
 /* end skills */
 /* start divider */
 .divider {
-    background: url('../images/divider-bg.jpg');
+    background: url("../images/divider-bg.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -524,11 +522,10 @@ h3.about-title {
     font-weight: bold;
 }
 
-#about .mb-auto, .my-auto {
-    margin-bottom: auto!important;
+#about .mb-auto,
+.my-auto {
+    margin-bottom: auto !important;
 }
-
-
 
 #about #award-box {
     overflow: hidden;
@@ -711,30 +708,37 @@ h3.about-title {
     #about #award-box {
         padding-left: 20px;
     }
+
     #about #award-box:before {
         left: 20px;
     }
+
     #about #award-box .award {
         width: 100%;
     }
+
     #about #award-box .award,
     #about #award-box .award-content {
         float: right;
-        padding:5px;
+        padding: 5px;
         text-align: left;
     }
+
     #about #award-box .award:first-child:before,
     #about #award-box .award:last-child:nth-child(odd):before {
         right: auto;
         left: -11px;
     }
+
     #about #award-box .award-icon {
         right: 0;
         left: -12px;
     }
+
     #about #award-box .award-content:before {
         left: -7.3px;
     }
+
     #about #award-box .award-content:after {
         left: -14%;
     }
@@ -872,7 +876,71 @@ h3.about-title {
 }
 
 /* end portfolio */
+/* start references */
+.references {
+    background: url("../images/oficina-1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #ffffff;
+    text-align: center;
+}
 
+.references .ref_inner .col-lg-3 {
+    vertical-align: middle;
+    align-self: center;
+}
+
+.references .ref_inner {
+    padding-bottom: 8rem;  
+}
+
+.references .ref_item {
+    border: 1px solid #eeeeee;
+    border-radius: 10px;
+    background: #fff;
+    padding: 40px 28px;
+}
+
+.references .ref_item p {
+    font-style: italic;
+    color: #232426;
+}
+
+.references .ref_item .title_card {
+    color: #222222;
+    font-size: 20px;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+}
+
+.references .ref_item a {
+    color: #ffc000;
+}
+
+.references .ref_item  ul {
+
+    color: #337ab7;
+
+}
+
+.references .ref_item .fa-li {
+    left: -2em;
+    position: absolute;
+    text-align: center;
+    width: 2em;
+    line-height: inherit;
+}
+
+.references .ref_item .card .card-text {
+    color: #1e1e21;
+    font-size: 16px;
+    padding: 2px 0px;
+    font-family: sans-serif;
+}
+
+/* end references */
 /* start contact */
 #contact {
     background: #ffffff;
@@ -884,7 +952,7 @@ h3.about-title {
     background: transparent;
     border-radius: 0px;
     box-shadow: none;
-    border: 1px solid #CCC;
+    border: 1px solid #ccc;
     margin-bottom: 20px;
     transition: all 0.4s ease-in-out;
 }
@@ -967,11 +1035,9 @@ footer span {
     h2 {
         font-size: 30px;
     }
-
 }
 
 /* end media 980 */
-
 
 /* start media 768 */
 @media screen and (max-width: 767px) {

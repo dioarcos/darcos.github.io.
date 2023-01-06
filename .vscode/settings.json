@@ -1,0 +1,15 @@
+{
+    "MinifyAll.disableCodeContextMenu": true,
+    "MinifyAll.disableCss": true,
+    "MinifyAll.disableFileExplorerContextMenu": true,
+    "MinifyAll.disableHtml": true,
+    "MinifyAll.disableJson": true,
+    "MinifyAll.disableMessages": true,
+    "MinifyAll.disablePhp": true,
+    "MinifyAll.disableScss": true,
+    "MinifyAll.disableSass": true,
+    "MinifyAll.disableXml": true,
+    "MinifyAll.minifyOnSaveToNewFile": true,
+    "MinifyAll.minifyOnSaveToNewFIle": false,
+    "MinifyAll.PrefixOfNewMinifiedFiles": ".min"
+}
