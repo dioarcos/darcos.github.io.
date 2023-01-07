@@ -56,28 +56,33 @@
         let email = document.forms[0].email.value;
         let subject = document.forms[0].subject.value;
         let message_text = document.forms[0].message_text.value;
-        fetches(names, email, subject, message_text);
-
+        if (names.trim().length > 0 && email.trim().length > 0 && subject.trim().length > 0 && message_text.trim().length > 0 ) {
+            document.getElementById("submitButton").setAttribute("disabled", true);
+            fetches(names, email, subject, message_text);
+        }else {
+            let message = 'Existen campos vacios' 
+            createAlert('',true,true,'pageMessages',message)
+        }
     }
         
     const fetches = (names, email, subject, message_text) =>{
-       
         Email.send({
             SecureToken : "ddd0f249-5e42-4787-aa2c-22cd27484487",
             To : 'dioarcos@gmail.com',
-            From : email,
-            Subject : subject,
-            Body :  message_text
+            From : 'dioarcos@gmail.com',
+            Subject : "Un nuevo trabajo !!",
+            Body :'Email : ' + email + ' Nombre : ' + names +', subjewct : '+ subject + ', mensaje :' +message_text
         }).then(
-            message => createAlert('','Excelente, Gracias por escribir!','Pronto me pondre en contacto','success',true,true,'pageMessages')
+            //message => message
+            message => createAlert('',true,true,'pageMessages',message)
         );
-        
     };
 
     /*----------------------------------------------------*/
     /*  Alerts
     /*----------------------------------------------------*/
-    function createAlert(title, summary, details, severity, dismissible, autoDismiss, appendToId) {
+    function createAlert(title, dismissible, autoDismiss, appendToId, message ) {
+        console.log(message);
         //mapa de iconos
         var iconMap = {
             info: "fa fa-info-circle",
@@ -87,6 +92,23 @@
         };
 
         var iconAdded = false;
+
+        if (message == 'OK'){
+            severity = 'success';
+            summary = 'Excelente, Gracias por escribir!';
+            details = 'Pronto me pondre en contacto';
+            $('#names').val('');
+            $('#email').val('');
+            $('#subject').val('');
+            $('#message_text').val('');
+            document.getElementById("submitButton").disabled = false;
+        }else {
+            severity = 'danger';
+            summary = 'Opps!! , Algo salió mal'
+            details = message ;
+            document.getElementById("submitButton").disabled = false;
+            
+        }
 
         var alertClasses = ["alert", "animated", "flipInX"];
         alertClasses.push("alert-" + severity.toLowerCase());
